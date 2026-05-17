@@ -1,0 +1,93 @@
+.detail-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.value.grid-2 {
+    display: grid;
+    grid-template-columns: 140px 40px 140px;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    color: #000;
+    font-weight: bold;
+}
+
+
+.row:last-child {
+    border-bottom: none;
+}
+
+/* 左ラベル */
+.label {
+    color: #666;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+/* 右値 */
+.value {
+    display: flex;
+    align-items: center;
+}
+
+/* 横並び用 */
+.value.inline {
+    gap: 10px;
+}
+
+/* 入力フィールド */
+.value.grid-2 input[type="time"] {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+
+    appearance: none;
+}
+
+/* テキストエリア */
+textarea {
+    width:340px;
+    min-height:80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ボタン */
+.action {
+    text-align: center;
+}
+
+.error {
+    color: red;
+    text-align: right;
+}
+
+.error-box {
+    background: #ffecec;
+    color: red;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.input-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}

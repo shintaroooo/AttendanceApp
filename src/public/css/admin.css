@@ -1,0 +1,4 @@
+/* 日付表示だけ追加 */
+.current-date {
+    font-weight: bold;
+}

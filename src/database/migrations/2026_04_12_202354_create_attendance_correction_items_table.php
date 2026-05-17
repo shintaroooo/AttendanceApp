@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\App;
 
-class CreateUsersTable extends Migration
+class CreateAttendanceCorrectionItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,15 +15,13 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('attendance_correction_items', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->foreignId('attendance_correction_id')->constrained()->cascadeOnDelete();
+            $table->string('field');
+            $table->text('before_value')->nullable();
+            $table->text('after_value')->nullable();
             $table->timestamps();
-            $table->text('note')->nullable();
         });
     }
 
@@ -34,6 +32,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('attendance_correction_items');
     }
 }
